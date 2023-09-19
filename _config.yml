@@ -12,3 +12,6 @@ github_username: wisdomsky
 markdown: kramdown
 permalink: /:year/:title:output_ext
 remote_theme: pages-themes/leap-day@v0.2.0
+
+github:
+  is_project_page: false
