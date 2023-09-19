@@ -70,6 +70,6 @@ Example Response:
 
 ### Viewing the detailed visits count history (Not yet available)
 
-    https://visitly.paodayag.dev/{name}/graph
+    https://visitly.paodayag.dev/{name}/history
 
 
