@@ -1,6 +1,6 @@
 
 # Site settings
-title: Visitly
+title: Visit.ly
 email: me@paodayag.dev
 description: > # this means to ignore newlines until "baseurl:"
   Not only shortens URLs but also counts and give you access to the metrics and other features like shields.io badge!
