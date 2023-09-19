@@ -11,7 +11,7 @@ github_username: wisdomsky
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
-remote_theme: pages-themes/leap-day@v0.2.0
+theme: minima
 
 github:
   is_project_page: false
