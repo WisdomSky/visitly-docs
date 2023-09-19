@@ -60,7 +60,7 @@ URL:
 Example Response:
 
     {
-    	"_id": "linuxserver.zip",
+    	"name": "linuxserver.zip",
     	"url": "https://github.com/WisdomSky/CasaOS-LinuxServer-AppStore/archive/refs/heads/main.zip",
     	"visits": 1825083,
     	"last_updated": "09-19-2023 09:29:50PM UTC"
