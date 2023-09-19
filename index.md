@@ -68,8 +68,8 @@ Example Response:
 
 ---
 
-### Viewing the detailed visits count history (Not yet available)
+### Viewing the detailed visits count detailed statistics (Not yet available)
 
-    https://visitly.paodayag.dev/{name}/history
+    https://visitly.paodayag.dev/{name}/stats
 
 
