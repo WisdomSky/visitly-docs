@@ -1,4 +1,4 @@
-# Terms & conditions
+# Terms and conditions
 
 *Last Updated: September 20, 2023*
 
