@@ -1,4 +1,4 @@
-# Terms and Conditions for Visitly - Anti-Malicious Use Policy
+# Terms & conditions
 
 *Last Updated: September 20, 2023*
 
