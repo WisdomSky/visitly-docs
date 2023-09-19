@@ -1,1 +1,13 @@
 
+# Site settings
+title: Visitly Documentation
+email: me@paodayag.dev
+description: > # this means to ignore newlines until "baseurl:"
+  Not only shortens URLs but also counts and give you access to the metrics and other features like shields.io badge!
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "https://visitly-docs.paodayag.dev" # the base hostname & protocol for your site
+github_username:  wisdomsky
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:title:output_ext
