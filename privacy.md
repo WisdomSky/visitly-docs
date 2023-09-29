@@ -18,7 +18,6 @@ We also record and store the number of visits to each short URL generated throug
 
 We value your privacy, and we want to make it clear that we **do not** collect any personal information about visitors, including but not limited to:
 
-- IP addresses
 - Browser information
 - Geolocation data
 - User agent information
