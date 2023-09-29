@@ -1,12 +1,13 @@
 
-Not only shortens URLs but also counts and give you access to the metrics and other features like shields.io badge!
+Visit.ly not only shortens URLs but also counts and lets you display metrics as badge and charts!
 
 --- 
 
-### Creating a shortURL
+# Create
 
+> &nbsp;**POST**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/create`
 
-    POST https://visitly.paodayag.dev/create
+Body:
 
     {
         "name": "my-website",
@@ -22,54 +23,132 @@ Example Response:
 
 ---
 
-### Displaying number of visits as shields.io badge
-
-Badge Image URL:
-
-    https://visitly.paodayag.dev/{name}/badge
-
-Example Markdown:
-
-    ![Number of installs](https://visitly.paodayag.dev/linuxserver.zip/badge?label=Installs)
-
-Example HTML:
-
-    <img src="https://visitly.paodayag.dev/linuxserver.zip/badge?label=Installs" alt="Number of installs" />
-
-Example Display:
-
-![Number of installs](https://visitly.paodayag.dev/linuxserver.zip/badge?label=Installs)
-
-
-#### Customization Options
-
-| Option | Description |
-| --- | --- |
-| label | Custom badge label. Default: `Visits` |
-| labelColor | Background color for the label. Default: `#555` |
-| color | Background color for the visits count. Default `#4c1` |
-
----
-
-### Getting the visits count information
+# Retrieving Info
 
 URL:
 
-    https://visitly.paodayag.dev/{name}/info
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/info`
 
+    
 Example Response:
 
     {
     	"name": "linuxserver.zip",
     	"url": "https://github.com/WisdomSky/CasaOS-LinuxServer-AppStore/archive/refs/heads/main.zip",
     	"visits": 1825083,
+        "visits_unique": 12345,
     	"last_updated": "09-19-2023 09:29:50PM UTC"
     }
 
 ---
 
-### Viewing the detailed visits count detailed statistics (Not yet available)
 
-    https://visitly.paodayag.dev/{name}/stats
+# Badges
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/badge`
+
+
+#### Options
+
+| Option | Description |
+| --- | --- |
+| unique | Shows unique visitors. Default: `false` |
+| label | Custom badge label. Default: `Visits` |
+| labelColor | Background color for the label. Default: `#555` |
+| color | Background color for the visits count. Default `#4c1` |
+
+#### Total Visits Badge
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/badge?label=Unique%20Visits`
+
+Example:
+
+![Total Visits](https://visitly.paodayag.dev/linuxserver.zip/badge?label=Total%20Visits)
+
+#### Unique Visits Badge
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/badge?unique=1&label=Unique%20Visits`
+
+Example:
+
+![Unique Visits](https://visitly.paodayag.dev/linuxserver.zip/badge?unique=1&label=Unique%20Visits)
+
+
+### Displaying Badges
+
+Markdown:
+
+```markdown
+![Number of installs](https://visitly.paodayag.dev/linuxserver.zip/badge?label=Installs)
+```
+
+HTML:
+
+```html
+<img src="https://visitly.paodayag.dev/linuxserver.zip/badge?label=Installs" alt="Number of installs" />
+```
+---
+
+# Charts
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/chart`
+
+#### Options
+
+| Option | Description |
+| --- | --- |
+| type | Type of chart . Default: `daily` |
+| unique | Shows unique visitors. Default: `false` |
+
+See [Chart.js](https://www.chartjs.org/docs/latest/configuration/#options) for other applicable options.
+
+
+#### Daily Visits Chart
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/chart`
+
+Example:
+
+![Total Visits](https://visitly.paodayag.dev/linuxserver.zip/chart)
+
+#### Unique Daily Visits Badge
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/chart?unique=1`
+
+Example:
+
+![Unique Visits](https://visitly.paodayag.dev/linuxserver.zip/chart?unique=1)
+
+
+#### Monthly Visits Chart
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/chart?type=monthly`
+
+Example:
+
+![Total Visits](https://visitly.paodayag.dev/linuxserver.zip/chart?type=monthly)
+
+#### Unique Monthly Visits Badge
+
+> &nbsp;**GET**&nbsp;&nbsp;&nbsp;&nbsp;`https://visitly.paodayag.dev/{name}/chart?unique=1&type=monthly`
+
+Example:
+
+![Unique Visits](https://visitly.paodayag.dev/linuxserver.zip/chart?unique=1&type=monthly)
+
+
+### Displaying Charts
+
+Markdown:
+
+```markdown
+![Chart](https://visitly.paodayag.dev/linuxserver.zip/chart)
+```
+
+HTML:
+
+```html
+<img src="https://visitly.paodayag.dev/linuxserver.zip/chart" alt="Chart" />
+```
 
 
